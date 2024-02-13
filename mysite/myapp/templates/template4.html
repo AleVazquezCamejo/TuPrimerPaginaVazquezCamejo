@@ -1,0 +1,12 @@
+{% extends "templateBase.html" %}
+
+{% block body %}
+<form action="/cursosFormulario/"  method="post">   
+    <p> Nombre: <input type = "text" name="nombre">     
+    <p> Modelo: <input type = "text" name="modelo">             
+    <input type = "submit" value="Enviar">            
+</form>                                    
+
+
+
+{% endblock body %}

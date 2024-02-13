@@ -1,0 +1,29 @@
+<!DOCTYPE html>      
+<html lang="en">      
+<head>               
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>   
+</head>
+<body>
+    {% if mi_formulario.errores %}
+    <p style="color: red">Estan mal los datos, revisar</p>
+    {% endif %}
+
+
+    <form action="/CursosFormulario/"  method="post">{% csrf_token %}
+        <table>
+            {{mi_formulario.as_tabla}}
+        </table>
+        <p> Nombre: <input type = "text" name="nombre">     
+        <p> Fecha de nacimiento: <input type = "text" name="fecha_nacimiento">
+        <p> Email: <input type = "text" name="email">      
+        <input type = "submit" value="Enviar">
+    </form>
+    
+</body>                                           
+</html>
+    
+</body>                                           
+</html>
