@@ -12,9 +12,9 @@ class empleado(models.Model):
     nombre= models.CharField(max_length=50)
     fecha_nacimiento= models.DateField()
     email= models.EmailField()
-    profesion = models.CharField(max_length=50)
+    puesto = models.CharField(max_length=50)
    
 class articulo(models.Model):
-    nombre= models.CharField(max_length=50)
+    nombreArticulo= models.CharField(max_length=50)
     modelo = models.CharField(max_length=50)
    

@@ -1,0 +1,25 @@
+{% extends "bootstrapp_base.html" %}
+
+{% block head %}
+
+<h1 class="mb-5">A continuacion busque un articulo</h1>
+
+{% endblock head %}
+
+
+
+{% block body %}
+
+   {% if articulo %}
+   <p>Resultados para: {{nombreArticulo}}</p>
+   <ul>
+   {% for Articulo in articulo %}
+        <li>{{Articulo.nombreArticulo}} | {{Articulo.modelo}}</li>
+   {% endfor %}
+   <ul>
+   {% else %}
+   <p>No hay datos con esa descripcion.</p>
+   {% endif %}
+
+
+{% endblock body %}

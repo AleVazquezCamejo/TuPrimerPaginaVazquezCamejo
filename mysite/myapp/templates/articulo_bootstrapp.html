@@ -1,0 +1,28 @@
+{% extends "bootstrapp_base.html" %}
+
+{% block head %}
+
+<h1 class="mb-5">A continuacion cargue el nuevo articulo</h1>
+
+{% endblock head %}
+
+
+
+{% block body %}
+
+    {% if mi_formulario.errores %}
+    <p style="color: red">Estan mal los datos, revisar</p>
+    {% endif %}
+
+
+    <form action=""  method="post">{% csrf_token %}
+        <table>
+            {{mi_formulario.as_tabla}}
+        </table>
+        <p> Nombre: <input type = "text" name="nombreArticulo">     
+        <p> Modelo: <input type = "text" name="modelo">      
+        <input type = "submit" value="Enviar">
+    </form>
+    
+                                         
+{% endblock body %}

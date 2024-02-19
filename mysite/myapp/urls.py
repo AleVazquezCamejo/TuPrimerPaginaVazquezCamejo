@@ -7,5 +7,5 @@ urlpatterns = [
     path('FormularioCliente/', views.formulario_cliente, name="Formularios Clientes"),
     path('FormularioEmpleado/', views.formulario_empleado, name="Formularios Empleado"),
     path('FormularioArticulo/', views.formulario_articulo, name="Formularios Articulo"),
-    
+    path('BuscarArticulo/', views.buscar_articulo, name="Buscar Articulo"),
 ]
